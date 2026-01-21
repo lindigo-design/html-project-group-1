@@ -9,10 +9,16 @@
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
+@import url('./common.css');
 
 /* Sections style */
 @import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
+@import url('./hero.css');
+@import url('./about-us.css');  
+@import url('./our-lessons.css');
+@import url('./proposal.css');
+@import url('./teachers.css');
+@import url('./leave-an-application.css');
+@import url('./reviews.css');
+
 @import url('./footer.css');
