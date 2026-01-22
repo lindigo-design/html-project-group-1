@@ -48,9 +48,6 @@ button {
     padding-top: 32px;
     padding-bottom: 32px;
     border-radius: 30px;
-    border: 1px solid #4DC274;
-
-    background: #FFF;
 }
 
 /*button */
@@ -169,10 +166,9 @@ button {
     letter-spacing: -0.02em;
     color : var(--black);
     text-align: center;
-    margin-bottom: 16px;
 }
 
-/* responsive */
+/* responsive     */
 @media screen and (min-width: 768px) {
     .container{
         max-width: 768px;
