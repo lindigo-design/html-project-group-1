@@ -51,7 +51,7 @@
 }
 
 .accent-light {
-  color: #adffb6; /* Світло-зелений колір з макета */
+  color: #bee8cc; /* Світло-зелений колір з макета */
 }
 
 .normal-btn {
@@ -142,6 +142,8 @@
   .hero {
     padding: 16px 64px 0 64px;
     margin-bottom: 96px;
+    max-width: 1280px;
+    margin: 0 auto;
   }
 
   .hero-container {
