@@ -1,0 +1,278 @@
+.our-lessons {
+ text-align: center;
+ padding-top: 64px;
+}
+
+
+@media (min-width: 768px) {
+ .our-lessons {
+   padding-top: 64px;
+ }
+}
+
+
+@media (min-width: 1280px) {
+ .our-lessons {
+   padding-top: 64px;
+ }
+}
+
+
+.our-lessons .title-section {
+ margin: 0 0 16px;
+ font-weight: 700;
+ font-size: 32px;
+ line-height: 36px;
+ letter-spacing: -0.02em;
+ color: var(--black);
+ text-align: center;
+}
+
+
+@media (min-width: 768px) {
+ .our-lessons .title-section {
+   font-size: 40px;
+   line-height: 48px;
+ }
+}
+
+
+@media (min-width: 1280px) {
+ .our-lessons .title-section {
+   font-size: 40px;
+   line-height: 48px;
+ }
+}
+
+
+.our-lessons .underline {
+ position: relative;
+ display: inline-block;
+ z-index: 1;
+}
+
+
+.our-lessons .underline::after {
+ content: "";
+ position: absolute;
+ left: -6px;
+ right: -6px;
+ bottom: -6px;
+ height: 12px;
+ background: var(--light-green);
+ border-radius: 8px;
+ z-index: -1;
+}
+
+
+@media (min-width: 768px) {
+ .our-lessons .underline::after {
+   height: 20px;
+ }
+}
+
+
+.our-lessons_description {
+ max-width: 335px;
+ margin: 0 auto 40px;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 24px;
+ color: var(--black);
+ opacity: 0.5;
+ text-align: center;
+}
+
+
+@media (min-width: 768px) {
+ .our-lessons_description {
+   max-width: 665px;
+   margin-bottom: 64px;
+   font-size: 18px;
+   line-height: 30px;
+ }
+}
+
+
+.lessons-cards {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 20px;
+}
+
+
+@media (min-width: 768px) {
+ .lessons-cards {
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   gap: 32px;
+ }
+}
+
+
+@media (min-width: 1280px) {
+ .lessons-cards {
+   flex-wrap: nowrap;
+   justify-content: center;
+   gap: 32px;
+ }
+}
+
+
+.lesson-card {
+ width: 335px;
+ min-height: 400px;
+ height: auto;
+ padding: 20px;
+ border: 1px solid var(--green);
+ border-radius: 24px;
+ background: var(--white);
+
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+}
+
+
+@media (min-width: 768px) {
+ .lesson-card {
+   width: calc((100% - 32px) / 2);
+   max-width: 336px;
+   min-height: 404px;
+   padding: 32px;
+ }
+}
+
+
+@media (min-width: 1280px) {
+ .lesson-card {
+   width: 320px;
+   min-height: 404px;
+ }
+}
+
+
+.lesson-card_title {
+ margin: 0 0 16px;
+ font-weight: 700;
+ font-size: 20px;
+ line-height: 24px;
+ color: var(--black);
+}
+
+
+.lesson-card_price {
+ margin: 0 0 40px;
+ font-weight: 700;
+ font-size: 32px;
+ line-height: 36px;
+}
+
+
+@media (min-width: 768px) {
+ .lesson-card_price {
+   line-height: 44px;
+   margin-bottom: 32px;
+ }
+}
+
+
+@media (min-width: 1280px) {
+ .lesson-card_price {
+   margin-bottom: 16px;
+ }
+}
+
+
+.lesson-card_text {
+ margin: 0 0 20px;
+ font-weight: 400;
+ font-size: 14px;
+ line-height: 24px;
+ color: var(--black);
+ opacity: 0.5;
+}
+
+
+@media (min-width: 768px) {
+ .lesson-card_text {
+   font-size: 16px;
+   margin-bottom: 32px;
+ }
+}
+
+
+.lesson-card .normal-btn {
+ width: 100%;
+ min-height: 52px;
+ border-radius: 12px;
+ cursor: pointer;
+ text-decoration: none;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 1px solid transparent;
+ margin-top: auto;
+
+
+ font-weight: 700;
+ font-size: 14px;
+ line-height: 24px;
+
+
+ background: var(--green);
+ color: var(--white);
+}
+
+
+.lesson-card .normal-btn:hover,
+.lesson-card .normal-btn:focus-visible  {
+ background-color: var(--green-dark);
+}
+
+
+@media (min-width: 768px) {
+ .lesson-card .normal-btn {
+   min-height: 60px;
+   font-size: 18px;
+   line-height: 28px;
+ }
+}
+
+
+.lessons-cards .lesson-card:nth-child(2) {
+ background-color: var(--green);
+ color: var(--white);
+}
+
+
+.lessons-cards .lesson-card:nth-child(2) .lesson-card_title,
+.lessons-cards .lesson-card:nth-child(2) .lesson-card_text,
+.lessons-cards .lesson-card:nth-child(2) .lesson-card_amount,
+.lessons-cards .lesson-card:nth-child(2) .lesson-card_period {
+ color: var(--white);
+ opacity: 1;
+}
+
+
+.lessons-cards .lesson-card:nth-child(2) .normal-btn {
+ background: transparent;
+ border: 1px solid var(--white);
+ color: var(--white);
+}
+
+
+.lessons-cards .lesson-card:nth-child(2) .normal-btn:hover,
+.lessons-cards .lesson-card:nth-child(2) .normal-btn:focus-visible {
+ background-color: var(--green-dark);
+ border-color: var(--green-dark);
+}
