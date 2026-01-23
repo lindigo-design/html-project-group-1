@@ -42,16 +42,6 @@ button {
   padding-bottom: 150px;
 }
 
-.container{
-    max-width: 320px;
-    margin: 0 auto; 
-    padding-top: 32px;
-    padding-bottom: 32px;
-    border-radius: 30px;
-    border: 1px solid #4DC274;
-
-    background: #FFF;
-}
 
 /*button */
 .normal-btn{
