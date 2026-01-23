@@ -3,19 +3,19 @@
 .about-us-section {
    display: flex;
    justify-content: center;
-   padding-top: 80px;
    margin: 0 20px;
+
  
 }
 @media screen and (min-width: 768px) {
  .about-us-section {
-    padding-top: 100px;
+   margin-bottom: 100px;
 }
 }
 @media screen and (min-width: 1280px) {
  .about-us-section {
-    padding-top: 96px;
     margin: 0 32px;
+    margin-bottom: 150px;
 }
 }
 
