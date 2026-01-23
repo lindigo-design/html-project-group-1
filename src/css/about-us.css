@@ -1,8 +1,11 @@
+
 /* section */
 .about-us-section {
-    display: flex;
-    justify-content: center;
-    padding-top: 80px;
+   display: flex;
+   justify-content: center;
+   padding-top: 80px;
+   margin: 0 20px;
+ 
 }
 @media screen and (min-width: 768px) {
  .about-us-section {
@@ -12,20 +15,22 @@
 @media screen and (min-width: 1280px) {
  .about-us-section {
     padding-top: 96px;
+    margin: 0 32px;
 }
+}
+
+/* change of padding from 16px to 0 */
+.container{ 
+  padding: 0;
 }
 
 /* container general */
 .about-us-container{
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
     gap: 40px;  
-    width: 100%;
-    max-width: 335px;
-    padding: 0 20px;
 }
 @media screen and (min-width: 768px){
   .about-us-container{
@@ -119,10 +124,12 @@
     padding: 0 87px;
 }
 } 
+
 /* Container with the cards */
 .features {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
   gap: 20px;
 }
 @media screen and (min-width: 768px){
@@ -142,7 +149,6 @@
 /* Right column (image) */
 .features-item:last-child {
   width: 100%;
-  max-width: 335px;
   height: 100%;
 
   background-color: var(--green);
@@ -163,11 +169,11 @@
   max-width: 310px;
 }
 } 
-
 /*  Featurs list  */
 .features-list {
   display: flex;
   flex-wrap: wrap;  
+
   gap: 20px;
 }
 @media screen and (min-width: 768px){
@@ -178,6 +184,7 @@
 
 .features-list__item {
   width: 100%;
+  min-height: 160px;
   background-color: var(--gray);
   border-radius: 16px;
   padding: 32px;
