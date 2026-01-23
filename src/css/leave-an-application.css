@@ -1,0 +1,445 @@
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+
+/* Visually hidden helper */
+.application-form__sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mobile first */
+
+.application__container {
+    max-width: 375px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.application__title {
+    color: var(--black);
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.64px;
+    margin-bottom: 14px;
+}
+
+.application__accent {
+    position: relative;
+}
+
+.application__accent.underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #bee8cc;
+    z-index: -1;
+}
+
+.application__text {
+    max-width: 335px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: -0.02em;
+    color: rgba(18, 20, 23, 0.8);
+}
+
+/* layout wrapper */
+.application__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+}
+
+/* Left column */
+.application-card {
+    display: none;
+}
+
+/* Form (mobile) */
+.application-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 24px;
+}
+
+/* Fields */
+.application-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.application-form__label {
+    display: block;
+}
+
+/* Inputs/Textarea */
+.application-form__input,
+.application-form__textarea {
+    width: 100%;
+    border: 1px solid rgba(18, 20, 23, 0.1);
+    border-radius: 12px;
+    padding: 16px 18px;
+    line-height: 1.3;
+    color: var(--black);
+    background-color: #fff;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.application-form__textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.application-form__input::placeholder,
+.application-form__textarea::placeholder {
+    color: var(--black);
+}
+
+/* hover + focus on INPUT */
+.application-form__input:hover,
+.application-form__textarea:hover,
+.application-form__input:focus,
+.application-form__textarea:focus {
+    border-color: var(--green);
+}
+
+/* Radios */
+
+.application-form__legend {
+    width: 100%;
+    color: var(--black);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    /* 133.333% */
+    letter-spacing: -0.36px;
+    margin-bottom: 14px;
+}
+
+.application-form__teachers {
+    border: none;
+    padding: 0;
+    margin: 0 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 8px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.application-form__radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.application-form__radio-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    color: var(--black);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    letter-spacing: -0.28px;
+}
+
+.application-form__radio-ui {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(18, 20, 23, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.application-form__radio-ui::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.application-form__radio-input:checked+.application-form__radio-ui {
+    border-color: var(--green);
+}
+
+.application-form__radio-input:checked+.application-form__radio-ui::after {
+    background-color: var(--green);
+}
+
+.application-form__radio-text {
+    font-size: 18px;
+    line-height: 1.3;
+    letter-spacing: -0.36px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+/* Button */
+.application-form__btn {
+    width: 100%;
+    height: 52px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--green);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.7;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 32px 0 12px;
+}
+
+.application-form__btn:hover,
+.application-form__btn:focus {
+    background-color: var(--green-dark);
+}
+
+/* Privacy text */
+.application-form__privacy {
+    color: rgba(18, 20, 23, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+    max-width: 335px;
+    /* 133.333% */
+}
+
+.application-form__link {
+    color: rgba(18, 20, 23, 0.5);
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1167px) {
+    .application {
+        padding: 80px 0;
+    }
+
+    .application__container {
+        max-width: 704px;
+        padding: 0 32px;
+    }
+
+    .application__title {
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin-bottom: 0px;
+    }
+
+    .application__text {
+        color: rgba(18, 20, 23, 0.5);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.7px;
+        max-width: 586px;
+        margin: 16px 0 64px;
+    }
+
+    .application-card {
+        display: none;
+    }
+
+    .application-form {
+        max-width: 500px;
+    }
+
+    .application-form__input,
+    .application-form__textarea {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .application-form__radio-input {
+        font-size: 18px;
+        line-height: 1.3px;
+        letter-spacing: -0.36px;
+    }
+
+    .application-form__btn {
+        height: 52px;
+    }
+
+    .application-form__legend {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+
+    .application-form__teachers {
+        border: none;
+        padding: 0;
+        margin: 0 0 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .application-form__privacy {
+        color: rgba(18, 20, 23, 0.5);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.7;
+        max-width: 500px;
+    }
+}
+
+/* DESKTOP  */
+@media (min-width: 1168px) {
+    .application {
+        padding: 80px 0;
+    }
+
+    .application__container {
+        max-width: 1158px;
+        padding: 0 16px;
+    }
+
+    .application__title {
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin-bottom: 0px;
+    }
+
+    .application__text {
+        color: rgba(18, 20, 23, 0.5);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.7;
+        max-width: 709px;
+        margin: 16px auto 64px;
+    }
+
+    .application-number {
+        margin-top: 20px;
+    }
+
+    .application__content {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 32px;
+    }
+
+    /* Card desktop visibile */
+    .application-card {
+        display: block;
+        flex: 1;
+        border-radius: 30px;
+        overflow: hidden;
+        background: var(--green);
+    }
+
+    .application-image {
+        margin-bottom: 20px;
+    }
+
+    .application-number {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -0.8px;
+        color: #fff;
+        text-align: center;
+    }
+
+    .application-text_card {
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        padding: 8px 20px 40px;
+    }
+
+    .application-form {
+        flex: 1;
+        max-width: none;
+    }
+
+    .application-form__input,
+    .application-form__textarea {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .application-form__legend {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        margin-bottom: 16px;
+    }
+
+    .application-form__teachers {
+        border: none;
+        padding: 0;
+        margin: 0 0 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 16px;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .application-form__btn {
+        width: 100%;
+        height: 60px;
+        border-radius: 12px;
+        background: var(--green);
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.6;
+        /* 155.556% */
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        margin: 32px 0 12px;
+    }
+
+    .application-form__privacy {
+        color: rgba(18, 20, 23, 0.5);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.7;
+        max-width: 500px;
+    }
+}
