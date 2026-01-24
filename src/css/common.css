@@ -38,7 +38,18 @@ button {
 /* common */
 
 .section {
-    margin-bottom: 80px;
+    padding: 80px 20px;
+}
+/* responsive */
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 100px 32px;
+}
+}
+@media screen and (min-width: 1280px) {
+  .section {
+     padding: 96px 128px 150px;
+}
 }
 
 
@@ -174,7 +185,6 @@ button {
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1024px;
-    padding: 0 15px;
   }
 }
 
