@@ -3,12 +3,12 @@
 }
 
 .teachers-header {
-  margin-bottom: 40px;
+  max-width: 704px;
+  margin: 0 auto;
 }
 
 .teachers-subtitle {
   width: 100%;
-  padding: 0 20px;
   font-size: 14px;
   line-height: 1.71;
   text-align: center;
@@ -23,18 +23,18 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}п
+}
 
 .teacher-card {
-  max-width: 320px;
+  max-width: 335px;
   width: 100%;
   text-align: center;
 }
 
 .avatar-wrapper {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto 16px;
   border-radius: 50%;
   overflow: hidden;
@@ -142,26 +142,5 @@
 
   .title-section .underline::after {
     height: 16px;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 1280px) {
-  .teachers-section {
-    padding-top: 150px;
-  }
-
-  .teachers-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 64px 48px;
-    max-width: 100%;
-  }
-
-  .teacher-card {
-    max-width: 280px;
-  }
-
-  .title-section .underline::after {
-    height: 20px;
   }
 }
