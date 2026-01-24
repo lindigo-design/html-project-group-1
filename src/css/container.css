@@ -8,11 +8,11 @@
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 704px;
   }
 }
 /* Styles for Desktop devices */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1028px) {
   .container {
     max-width: 1024px;
   }
