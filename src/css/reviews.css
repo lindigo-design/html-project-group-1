@@ -1,39 +1,36 @@
-/* ===================== Загальні стилі секції ===================== */
+/* ===================== MOBILE FIRST (default) ===================== */
+
 .reviews {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding: 80px 0;
 }
 
 .reviews-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 335px;
+    margin: 40px auto 0;
     padding: 0 16px;
-    margin-top: 64px;
 }
 
 .reviews-list {
     display: flex;
     justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
+.reviews-item {
+    display: none;
+    /* ховаємо всі */
+}
 
-/* ===================== Картки ===================== */
+.reviews-item:first-child {
+    display: block;
+    /* показуємо першу */
+}
+
 .reviews-card {
-    display: flex;
-    flex-direction: column;
+    width: 335px;
+    height: 278px;
     background-color: #f3f5f6;
     border-radius: 30px;
-    max-width: 320px;
-    width: 100%;
-    height: 326px;
-    padding: 32px 0 32px 0;
-    box-sizing: border-box;
-    align-items: flex-start;
+    padding: 20px 0;
 }
 
 .review-user {
@@ -41,27 +38,23 @@
     align-items: center;
     gap: 12px;
     background-color: #4DC274;
-    border-radius: 15px;
-    padding: 16px;
-    width: calc(100% - 32px);
-    max-width: 288px;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 295px;
     height: 78px;
-    margin: 0 auto 20px auto;
-    box-sizing: border-box;
+    margin: 0 auto 20px;
 }
 
 .reviews-avatar {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .reviews-name {
-    margin: 0;
     font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
+    color: #fff;
 }
 
 .reviews-role {
@@ -70,138 +63,84 @@
 }
 
 .reviews-text {
-    margin: 0;
-    color: rgba(18, 20, 23, 0.5);
-    font-size: 16px;
-    font-weight: 400;
+    padding: 0 24px 24px;
+    font-size: 14px;
     line-height: 1.5;
-    text-align: left;
-    padding: 0 32px 32px 32px;
-    box-sizing: border-box;
-    flex-grow: 1;
+    color: rgba(18, 20, 23, 0.5);
 }
 
-/* ===================== Підзаголовок ===================== */
 .leave-application p {
-    color: rgba(18, 20, 23, 0.50);
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 335px;
+    margin: 16px auto 0;
     text-align: center;
-    font-family: Manrope, sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    margin-top: 16px;
-    margin-bottom: 0;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 647px;
+    color: rgba(18, 20, 23, 0.5);
 }
 
-/* Відстань між підзаголовком і картками */
-.leave-application+.reviews-container {
-    margin-top: 64px;
-
-}
-
-/* ===================== Адаптивність ===================== */
-
-/* Мобільний (до 767px) */
-@media (max-width: 767px) {
-    .reviews-container {
-        padding: 0 16px;
-    }
+/* ===================== TABLET ===================== */
+@media screen and (min-width: 768px) {
     .reviews {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding: 100px 0;
     }
 
-    .leave-application+.reviews-container {
-        margin-top: 40px;
-    }
-
-    .reviews-list {
-        justify-content: center;
-    }
-
-    .reviews-card {
-        width: 335px;
-        height: 278px;
-        padding: 20px 0;
-    }
-
-    .review-user {
-        max-width: 295px;
-        height: 78px;
-        padding: 20px;
-        margin-bottom: 20px;
-        align-items: center;
-        border-radius: 8px;
-    }
-
-    .reviews-text {
-        padding: 0 34px 34px 40px;
-        /* відступи тексту з боків і знизу */
-        font-size: 14px;
-        
-    }
-     .leave-application p {
-        font-size: 14px;
-        max-width: 335px;
-        line-height: 24px;
-     }
-
-
-    /* Тільки 1 картка */
-    .reviews-list .reviews-item:nth-child(n+2) {
-        display: none;
-    }
-}
-
-/* Планшет (768px - 1199px) */
-@media (min-width: 768px) and (max-width: 1199px) {
     .reviews-container {
+        max-width: 704px;
         margin-top: 64px;
-        padding: 0 16px;
-    }
-    .reviews {
-        padding-top: 100px;
-        padding-bottom: 100px;
     }
 
     .reviews-list {
-        justify-content: center;
         gap: 32px;
-        /* фіксована відстань між картками */
     }
+
+         .reviews-item {
+             display: none;
+             /* ховаємо всі */
+         }
+    
+         .reviews-item:nth-child(1),
+         .reviews-item:nth-child(2) {
+             display: block;
+             /* показуємо перші дві картки */
+         }
 
     .reviews-card {
         width: 336px;
         height: 326px;
-        flex: 0 0 auto;
         padding: 32px 0;
     }
 
     .review-user {
         max-width: 304px;
-        height: 78px;
-        padding: 16px;
-        margin-bottom: 32px;
-        align-items: center;
+        border-radius: 15px;
     }
 
-    /* 2 картки */
-    .reviews-list .reviews-item:nth-child(3) {
-        display: none;
+    .reviews-text {
+        font-size: 16px;
+        padding: 0 32px 32px;
+    }
+
+    .leave-application p {
+        font-size: 18px;
+        line-height: 30px;
+        max-width: 647px;
     }
 }
 
-/* Десктоп (1200px і більше) */
-@media (min-width: 1200px) {
-    .reviews-container {
-        margin-top: 64px;
-        padding: 0 16px;
+/* ===================== DESKTOP ===================== */
+@media screen and (min-width: 1280px) {
+    .reviews {
+        padding: 150px 0;
     }
+
+    .reviews-container {
+        max-width: 1280px;
+    }
+
+   .reviews-item {
+       display: block;
+       /* тепер показуються всі 3 картки */
+   }
 
     .reviews-list {
         justify-content: center;
@@ -210,15 +149,14 @@
 
     .reviews-card {
         width: 320px;
-        height: 326px;
-        padding: 32px 0;
     }
 
     .review-user {
-        max-width: 295px;
-        height: 78px;
-        padding: 16px;
-        margin-bottom: 32px;
-        align-items: center;
+        max-width: 288px;
     }
+
+    .leave-application p {
+    max-width: 647px;
+    }
+
 }
