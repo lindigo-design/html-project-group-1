@@ -13,8 +13,7 @@
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 20px;
-    padding-right: auto;
+    padding: 40px 20px 20px 20px;
 }
 
 .footer-info-container {
@@ -33,7 +32,6 @@
 
 .footer-logo {
     display: block;
-    padding-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -174,9 +172,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top:0;
+        padding: 32px 32px 16px;
     }
 
 
@@ -193,11 +189,12 @@
 
 
     .navigation-footer-container {
-        padding-top: 40px;
+        padding-top: 0px;
     }
 
-    .footer-social-list {
-        padding-top: 32px;
+    .footer-socials-list {
+        margin-top: 0;
+        margin-bottom: 40px;
     }
 .footer-bottom {
     flex-direction: row;
