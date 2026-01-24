@@ -3,6 +3,10 @@
     background-color: #121417;;
     padding: 0;
     text-align: left;
+    display: flex;
+    justify-content: center;
+
+
 }
 
 .footer-container {
@@ -48,7 +52,7 @@
     text-decoration: none;
 }
 
-.footer .footer-address {
+.footer-address {
     display:block;
 }
 
@@ -170,8 +174,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 0;
+        padding-right: 0;
         padding-top:0;
     }
 
@@ -189,7 +193,7 @@
 
 
     .navigation-footer-container {
-        padding-top: 32px;
+        padding-top: 40px;
     }
 
     .footer-social-list {
