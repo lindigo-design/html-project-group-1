@@ -55,7 +55,11 @@
 }
 
 .normal-btn {
-  max-width: 295px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
   width: 100%;
   padding: 16px;
   cursor: pointer;
@@ -141,9 +145,8 @@
 @media screen and (min-width: 1280px) {
   .hero {
     padding: 16px 64px 0 64px;
-    margin-bottom: 96px;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto 96px auto;
   }
 
   .hero-container {

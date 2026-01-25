@@ -3,9 +3,14 @@ a {
     color: currentColor;
     text-decoration: none;
 }
+.section{
+    margin: 0 20px 80px;
+}
 
-
-
+.application{
+    display: flex;
+    justify-content: center;
+}
 
 /* Visually hidden helper */
 .application-form__sr {
@@ -25,8 +30,10 @@ a {
 
 
 .application__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 100%;
-    padding: 0 16px;
     margin: 0 auto;
 }
 
@@ -61,7 +68,7 @@ a {
 
 
 .application__text {
-    max-width: 100%;
+    width: clamp(335px, 90vw, 640px);
     margin: 0 auto 10px;
     text-align: center;
     font-size: 14px;
@@ -284,15 +291,10 @@ a {
 
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1167px) {
-    .application {
-        padding: 80px 0;
-    }
-
+@media screen and (min-width: 768px) {
 
     .application__container {
-        max-width: 704px;
-        padding: 0 32px;
+        max-width: 100%;
     }
 
 
@@ -310,7 +312,7 @@ a {
         font-size: 18px;
         font-weight: 400;
         line-height: 1.7;
-        max-width: 586px;
+        max-width: calc(100%-2*59px);
         margin: 16px 0 64px;
     }
 
@@ -321,7 +323,7 @@ a {
 
 
     .application-form {
-        max-width: 500px;
+        width: clamp(500px, 90vw, 800px);
     }
 
 
@@ -373,15 +375,10 @@ a {
 
 
 /* DESKTOP  */
-@media (min-width: 1168px) {
-    .application {
-        padding: 80px 0;
-    }
-
+@media (min-width: 1280px) {
 
     .application__container {
         max-width: 1024px;
-        padding: 0 16px;
     }
 
 
