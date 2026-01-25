@@ -1,0 +1,199 @@
+/* ========== TEACHERS SECTION ========== */
+
+.teachers-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* контейнер тільки для teachers (не чіпаємо .container глобально) */
+.container-teachers {
+  max-width: 335px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* заголовок + підзаголовок */
+.teachers-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* title-section у тебе глобальний  */
+.teachers-section .title-section {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.125;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+/* underline як скрізь */
+.teachers-section .underline {
+  position: relative;
+  z-index: 1;
+}
+.teachers-section .underline::after {
+  content: '';
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  bottom: 4px;
+  height: 12px;
+  background-color: #bee8cc;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.teachers-subtitle {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: -0.02em;
+  color: rgba(18, 20, 23, 0.5);
+}
+
+/* GRID */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* card */
+.teacher-card {
+  text-align: center;
+}
+
+/* ========== AVATAR  ========== */
+.avatar-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #d0d0d0; /* для 1-ї картки якщо треба нейтральний фон */
+}
+
+.teacher-card:nth-child(2) .avatar-wrapper {
+  background: #d4b2af;
+}
+.teacher-card:nth-child(3) .avatar-wrapper {
+  background: #dfcc9f;
+}
+.teacher-card:nth-child(4) .avatar-wrapper {
+  background: #d1dfc3;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.teacher-card:hover .avatar {
+  transform: scale(1.05);
+}
+
+.teacher-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  margin-bottom: 4px;
+  color: var(--black);
+}
+
+.teacher-description {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: -0.02em;
+  color: rgba(18, 20, 23, 0.5);
+}
+
+/* ========== TABLET (>=768) ========== */
+@media screen and (min-width: 768px) {
+  .teachers-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .container-teachers {
+    max-width: 704px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .teachers-header {
+    margin-bottom: 64px;
+  }
+
+  .teachers-section .title-section {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .teachers-section .underline::after {
+    height: 16px;
+  }
+
+  .teachers-subtitle {
+    font-size: 18px;
+    line-height: 1.67;
+    max-width: 709px;
+    margin: 0 auto;
+  }
+
+  .teachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 32px;
+  }
+
+  .avatar-wrapper {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 32px;
+  }
+
+  .teacher-name {
+    font-size: 32px;
+    line-height: 1.13;
+    margin-bottom: 8px;
+  }
+
+  .teacher-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* ========== DESKTOP (>=1280) ========== */
+@media screen and (min-width: 1280px) {
+  .teachers-section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  .container-teachers {
+    max-width: 1280px;
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
+  .teachers-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 32px;
+  }
+
+  .teachers-section .underline::after {
+    height: 20px;
+  }
+}
