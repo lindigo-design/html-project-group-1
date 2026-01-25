@@ -38,7 +38,7 @@ button {
 /* common */
 
 .section {
-  margin: 0 20px 20px;
+  margin: 0 20px 80px;
 }
 /* responsive */
 @media screen and (min-width: 768px) {

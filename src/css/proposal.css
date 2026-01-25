@@ -1,6 +1,5 @@
 .proposal {
-  padding: 0 20px;
-  margin: 80px 0;
+  display: block;
 }
 
 /* Контейнер з градієнтним фоном та заокругленням */
