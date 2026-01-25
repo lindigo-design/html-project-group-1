@@ -65,7 +65,7 @@ a {
 
 
 .application__text {
-    width: clamp(335px, 90vw, 640px);
+    width: 100%;
     margin: 0 auto 10px;
     text-align: center;
     font-size: 14px;
