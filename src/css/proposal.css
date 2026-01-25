@@ -1,0 +1,291 @@
+.proposal {
+  padding: 0 20px;
+  margin: 80px 0;
+}
+
+/* Контейнер з градієнтним фоном та заокругленням */
+.proposal-container {
+  border-radius: 16px;
+  width: 100%;
+
+  background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
+  overflow: hidden; /* Щоб контент не виходив за межі заокруглених кутів */
+}
+
+.proposal-title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.05;
+  color: var(--white);
+  padding: 40px 20px 0 20px;
+}
+
+/* Обертка для картки, що центрує її та створює відступи */
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding: 65px 0;
+
+  margin: 0 -20px; /* Компенсація падінгів для мобільної версії */
+}
+
+/* Контейнер для картки та її фонових карток */
+.card-wrapper {
+  position: relative;
+  width: calc(
+    100% - 80px
+  ); /* Розраховує висоту кртки автоматично до контенту (без цього дебільно ресайзилось) */
+}
+
+/* Загальні стилі для декоративних підкладок під карткою */
+.card-bg-1,
+.card-bg-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+}
+
+/* Перша декоративна підкладка (нахилена вліво) */
+.card-bg-1 {
+  background: var(--light-green);
+  transform: rotate(-11deg);
+  z-index: 1;
+}
+
+/* Друга декоративна підкладка (нахилена вправо, напівпрозора) */
+.card-bg-2 {
+  background: rgba(255, 255, 255, 0.5);
+  transform: rotate(9deg);
+  z-index: 2;
+}
+
+/* Головна біла картка з контентом */
+.card-main {
+  position: relative;
+  background-color: white;
+  z-index: 3;
+  padding: 40px 20px;
+  border-radius: 16px;
+  height: auto;
+}
+
+/* Приховуємо зображення на мобільних пристроях */
+.proposal-image-box {
+  display: none;
+}
+
+.card-content-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.benefits-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.02em;
+  color: var(--black);
+}
+
+/* Елемент списку з іконкою-галочкою */
+.benefits-item::before {
+  content: '';
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/leave-an-application/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.normal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+
+  font-size: 14px;
+  line-height: 1.71;
+  height: 52px;
+  padding: 14px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .proposal {
+    padding: 0 32px;
+    margin: 100px 0;
+    max-width: 1279px;
+  }
+
+  .proposal-container {
+    border-radius: 30px;
+    overflow: visible; /* Дозволяємо декоративним карткам вилазити */
+  }
+
+  .proposal-title {
+    font-size: 60px;
+    line-height: 1.17;
+    padding: 64px 32px 0 32px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 82px 0;
+
+    margin: 0 -30px;
+  }
+
+  .card-wrapper {
+    position: relative;
+    width: calc(100% - 100px);
+  }
+
+  .card-bg-1,
+  .card-bg-2 {
+    border-radius: 30px;
+  }
+
+  .card-bg-1 {
+    transform: rotate(-11deg);
+  }
+
+  .card-bg-2 {
+    transform: rotate(10deg);
+  }
+
+  /* Перетворюємо картку на flex-контейнер для розміщення тексту та картинки поруч */
+  .card-main {
+    padding: 63px 32px;
+    border-radius: 30px;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .card-content {
+    flex: 1;
+    width: auto;
+  }
+
+  /* Показуємо фото книг */
+  .proposal-image-box {
+    display: block;
+    width: 214px;
+    height: 263px;
+    margin-right: -63px;
+    flex-shrink: 0;
+  }
+
+  .card-content-title {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .benefits-item {
+    gap: 16px;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .benefits-item::before {
+    width: 28px;
+    height: 28px;
+  }
+
+  .normal-btn {
+    max-width: 306px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    height: 60px;
+    padding: 16px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .proposal {
+    padding: 0 64px;
+    margin: 150px auto;
+  }
+
+  .proposal-title {
+    font-size: 60px;
+    line-height: 1.17;
+    padding: 64px 32px 0 32px;
+    width: 776px;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 140px 0;
+  }
+
+  .card-wrapper {
+    position: relative;
+    width: calc(100% - 130px);
+  }
+
+  .card-bg-1 {
+    transform: rotate(-11deg);
+  }
+
+  .card-bg-2 {
+    transform: rotate(8deg);
+  }
+
+  .card-main {
+    padding: 64px;
+    border-radius: 30px;
+
+    gap: 92px;
+  }
+
+  .proposal-image-box {
+    margin-right: -64px;
+  }
+
+  .card-content-title {
+    margin-bottom: 40px;
+  }
+
+  .benefits-list {
+    margin-bottom: 39px;
+  }
+}
