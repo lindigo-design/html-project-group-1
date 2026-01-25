@@ -52,7 +52,7 @@
 .our-lessons .underline::after {
   content: '';
   position: absolute;
-  left: -6px;
+  left: -6;
   right: -6px;
   left: -6px;
   bottom: 4px;
@@ -203,6 +203,36 @@
   }
 }
 
+.our-lessons .normal-btn {
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 14px 0;
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    border-color 250ms ease;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.71;
+}
+.our-lessons .normal-btn:hover,
+.our-lessons .normal-btn:focus {
+  background-color: var(--green-dark); 
+}
+
+@media screen and (min-width: 768px) {
+  .our-lessons .normal-btn {
+    padding: 16px 0;
+    height: 60px;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
 .our-lessons .main-btn {
   width: 100%;
   margin-top: auto;
@@ -219,6 +249,12 @@
   font-weight: 700;
   line-height: 1.71;
 }
+.our-lessons .main-btn:hover,
+.our-lessons .main-btn:focus {
+  background-color: var(--white);
+  border: 1px solid var(--green-dark);
+  color: var(--green);
+}
 
 @media screen and (min-width: 768px) {
   .our-lessons .main-btn {
@@ -228,7 +264,6 @@
     line-height: 1.56;
   }
 }
-
 .our-lessons .lessons-cards .lesson-card:nth-child(2) {
   background-color: var(--green);
   color: var(--white);
@@ -239,17 +274,4 @@
 .our-lessons .lessons-cards .lesson-card:nth-child(2) .lesson-card_period {
   color: var(--white);
   opacity: 1;
-}
-
-.our-lessons .lessons-cards .lesson-card:nth-child(2) .main-btn {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.6);
-  color: var(--white);
-}
-
-.our-lessons .lessons-cards .lesson-card:nth-child(2) .main-btn:hover,
-.our-lessons .lessons-cards .lesson-card:nth-child(2) .main-btn:focus-visible {
-  background-color: var(--green-dark);
-  border-color: var(--green-dark);
-  color: var(--white);
 }
