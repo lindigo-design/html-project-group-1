@@ -38,9 +38,8 @@ button {
 /* common */
 
 .section {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
-
 
 /*button */
 .normal-btn {
@@ -180,5 +179,4 @@ button {
 
 html {
   scroll-behavior: smooth;
-}
 }
