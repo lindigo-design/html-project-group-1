@@ -1,16 +1,21 @@
 /* ===================== MOBILE FIRST (default) ===================== */
 
 .reviews {
-    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
 }
 
 .reviews-container {
-    max-width: 335px;
+    width: 100%;
     margin: 40px auto 0;
-    padding: 0 16px;
+    padding: 0;
 }
 
 .reviews-list {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -26,11 +31,11 @@
 }
 
 .reviews-card {
-    width: 335px;
+    width: 100%;
     height: 278px;
     background-color: #f3f5f6;
     border-radius: 30px;
-    padding: 20px 0;
+    padding: 20px 20px;
 }
 
 .review-user {
@@ -40,7 +45,7 @@
     background-color: #4DC274;
     border-radius: 8px;
     padding: 20px;
-    max-width: 295px;
+    width: 100%;
     height: 78px;
     margin: 0 auto 20px;
 }
@@ -63,7 +68,7 @@
 }
 
 .reviews-text {
-    padding: 0 24px 24px;
+    padding: 0 14px 14px;
     font-size: 14px;
     line-height: 1.5;
     color: rgba(18, 20, 23, 0.5);
@@ -89,20 +94,34 @@
         margin-top: 64px;
     }
 
+    .About-us-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 704px;
+        padding: 0 28px;
+    }
+
+    .text-description {
+        max-width: 647px;
+        padding: 0;
+    }
+
     .reviews-list {
         gap: 32px;
     }
 
-         .reviews-item {
-             display: none;
-             /* ховаємо всі */
-         }
-    
-         .reviews-item:nth-child(1),
-         .reviews-item:nth-child(2) {
-             display: block;
-             /* показуємо перші дві картки */
-         }
+    .reviews-item {
+        display: none;
+        /* ховаємо всі */
+    }
+
+    .reviews-item:nth-child(1),
+    .reviews-item:nth-child(2) {
+        display: block;
+        /* показуємо перші дві картки */
+    }
 
     .reviews-card {
         width: 336px;
@@ -137,10 +156,16 @@
         max-width: 1280px;
     }
 
-   .reviews-item {
-       display: block;
-       /* тепер показуються всі 3 картки */
-   }
+    .text-description {
+        max-width: 647px;
+        padding: 0;
+    }
+
+
+    .reviews-item {
+        display: block;
+        /* тепер показуються всі 3 картки */
+    }
 
     .reviews-list {
         justify-content: center;
@@ -156,7 +181,7 @@
     }
 
     .leave-application p {
-    max-width: 647px;
+        max-width: 647px;
     }
 
 }
