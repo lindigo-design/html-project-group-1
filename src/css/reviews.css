@@ -1,0 +1,187 @@
+/* ===================== MOBILE FIRST (default) ===================== */
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.reviews-container {
+    width: 100%;
+    margin: 40px auto 0;
+    padding: 0;
+}
+
+.reviews-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reviews-item {
+    display: none;
+    /* ховаємо всі */
+}
+
+.reviews-item:first-child {
+    display: block;
+    /* показуємо першу */
+}
+
+.reviews-card {
+    width: 100%;
+    height: 278px;
+    background-color: #f3f5f6;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #4DC274;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    height: 78px;
+    margin: 0 auto 20px;
+}
+
+.reviews-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.reviews-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.reviews-role {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.reviews-text {
+    padding: 0 14px 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(18, 20, 23, 0.5);
+}
+
+.leave-application p {
+    font-size: 14px;
+    line-height: 24px;
+    max-width: 335px;
+    margin: 16px auto 0;
+    text-align: center;
+    color: rgba(18, 20, 23, 0.5);
+}
+
+/* ===================== TABLET ===================== */
+@media screen and (min-width: 768px) {
+    .reviews {
+        padding: 100px 0;
+    }
+
+    .reviews-container {
+        max-width: 704px;
+        margin-top: 64px;
+    }
+
+    .About-us-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 704px;
+        padding: 0 28px;
+    }
+
+    .text-description {
+        max-width: 647px;
+        padding: 0;
+    }
+
+    .reviews-list {
+        gap: 32px;
+    }
+
+    .reviews-item {
+        display: none;
+        /* ховаємо всі */
+    }
+
+    .reviews-item:nth-child(1),
+    .reviews-item:nth-child(2) {
+        display: block;
+        /* показуємо перші дві картки */
+    }
+
+    .reviews-card {
+        width: 336px;
+        height: 326px;
+        padding: 32px 0;
+    }
+
+    .review-user {
+        max-width: 304px;
+        border-radius: 15px;
+    }
+
+    .reviews-text {
+        font-size: 16px;
+        padding: 0 32px 32px;
+    }
+
+    .leave-application p {
+        font-size: 18px;
+        line-height: 30px;
+        max-width: 647px;
+    }
+}
+
+/* ===================== DESKTOP ===================== */
+@media screen and (min-width: 1280px) {
+    .reviews {
+        padding: 150px 0;
+    }
+
+    .reviews-container {
+        max-width: 1280px;
+    }
+
+    .text-description {
+        max-width: 647px;
+        padding: 0;
+    }
+
+
+    .reviews-item {
+        display: block;
+        /* тепер показуються всі 3 картки */
+    }
+
+    .reviews-list {
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .reviews-card {
+        width: 320px;
+    }
+
+    .review-user {
+        max-width: 288px;
+    }
+
+    .leave-application p {
+        max-width: 647px;
+    }
+
+}
