@@ -4,6 +4,8 @@ a {
 }
 
 
+
+
 /* Visually hidden helper */
 .application-form__sr {
     position: absolute;
@@ -17,13 +19,16 @@ a {
     border: 0;
 }
 
+
 /* Mobile first */
 
+
 .application__container {
-    width: 100%;
+    max-width: 100%;
     padding: 0 16px;
     margin: 0 auto;
 }
+
 
 .application__title {
     color: var(--black);
@@ -35,9 +40,11 @@ a {
     margin-bottom: 14px;
 }
 
+
 .application__accent {
     position: relative;
 }
+
 
 .application__accent.underline::after {
     content: '';
@@ -51,8 +58,9 @@ a {
     z-index: -1;
 }
 
+
 .application__text {
-    max-width: 335px;
+    max-width: 100%;
     margin: 0 auto 10px;
     text-align: center;
     font-size: 14px;
@@ -60,6 +68,7 @@ a {
     letter-spacing: -0.02em;
     color: rgba(18, 20, 23, 0.8);
 }
+
 
 /* layout wrapper */
 .application__content {
@@ -71,10 +80,12 @@ a {
     width: 100%;
 }
 
+
 /* Left column */
 .application-card {
     display: none;
 }
+
 
 /* Form (mobile) */
 .application-form {
@@ -85,6 +96,7 @@ a {
     border-radius: 24px;
 }
 
+
 /* Fields */
 .application-form__fields {
     display: flex;
@@ -93,9 +105,11 @@ a {
     margin-bottom: 32px;
 }
 
+
 .application-form__label {
     display: block;
 }
+
 
 /* Inputs/Textarea */
 .application-form__input,
@@ -110,20 +124,24 @@ a {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
 
+
     font-family: Manrope;
     font-size: 14px;
     font-weight: 400;
 }
+
 
 .application-form__textarea {
     resize: none;
     min-height: 120px;
 }
 
+
 .application-form__input::placeholder,
 .application-form__textarea::placeholder {
     color: var(--black);
 }
+
 
 /* hover + focus on INPUT */
 .application-form__input:hover,
@@ -133,7 +151,9 @@ a {
     border-color: var(--green);
 }
 
+
 /* Radios */
+
 
 .application-form__legend {
     width: 100%;
@@ -146,6 +166,7 @@ a {
     margin-bottom: 14px;
 }
 
+
 .application-form__teachers {
     border: none;
     padding: 0;
@@ -156,12 +177,14 @@ a {
     flex-direction: column;
 }
 
+
 .application-form__radio {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
 }
+
 
 .application-form__radio-input {
     position: absolute;
@@ -173,8 +196,10 @@ a {
     font-weight: 400;
     line-height: 1.7;
 
+
     letter-spacing: -0.28px;
 }
+
 
 .application-form__radio-ui {
     width: 20px;
@@ -187,6 +212,7 @@ a {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 .application-form__radio-ui::after {
     content: '';
     width: 10px;
@@ -196,13 +222,16 @@ a {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 .application-form__radio-input:checked+.application-form__radio-ui {
     border-color: var(--green);
 }
 
+
 .application-form__radio-input:checked+.application-form__radio-ui::after {
     background-color: var(--green);
 }
+
 
 .application-form__radio-text {
     font-size: 18px;
@@ -211,6 +240,7 @@ a {
     color: var(--black);
     font-weight: 400;
 }
+
 
 /* Button */
 .application-form__btn {
@@ -228,10 +258,12 @@ a {
     margin: 32px 0 12px;
 }
 
+
 .application-form__btn:hover,
 .application-form__btn:focus {
     background-color: var(--green-dark);
 }
+
 
 /* Privacy text */
 .application-form__privacy {
@@ -243,21 +275,25 @@ a {
     /* 133.333% */
 }
 
+
 .application-form__link {
     color: rgba(18, 20, 23, 0.5);
     text-decoration: underline;
 }
 
+
 /* Tablet */
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 1167px) {
     .application {
         padding: 80px 0;
     }
+
 
     .application__container {
         max-width: 704px;
         padding: 0 32px;
     }
+
 
     .application__title {
         font-size: 40px;
@@ -265,6 +301,7 @@ a {
         letter-spacing: -0.8px;
         margin-bottom: 0px;
     }
+
 
     .application__text {
         color: rgba(18, 20, 23, 0.5);
@@ -276,13 +313,16 @@ a {
         margin: 16px 0 64px;
     }
 
+
     .application-card {
         display: none;
     }
 
+
     .application-form {
         max-width: 500px;
     }
+
 
     .application-form__input,
     .application-form__textarea {
@@ -290,20 +330,24 @@ a {
         font-weight: 400;
     }
 
+
     .application-form__radio-input {
         font-size: 18px;
         line-height: 1.3px;
         letter-spacing: -0.36px;
     }
 
+
     .application-form__btn {
         height: 52px;
     }
+
 
     .application-form__legend {
         font-size: 20px;
         letter-spacing: -0.4px;
     }
+
 
     .application-form__teachers {
         border: none;
@@ -316,6 +360,7 @@ a {
         flex-direction: row;
     }
 
+
     .application-form__privacy {
         color: rgba(18, 20, 23, 0.5);
         font-size: 14px;
@@ -325,16 +370,19 @@ a {
     }
 }
 
+
 /* DESKTOP  */
-@media (min-width: 1280px) {
+@media (min-width: 1168px) {
     .application {
         padding: 80px 0;
     }
+
 
     .application__container {
         max-width: 1024px;
         padding: 0 16px;
     }
+
 
     .application__title {
         font-size: 40px;
@@ -342,6 +390,7 @@ a {
         letter-spacing: -0.8px;
         margin-bottom: 0px;
     }
+
 
     .application__text {
         color: rgba(18, 20, 23, 0.5);
@@ -353,15 +402,18 @@ a {
         margin: 16px auto 64px;
     }
 
+
     .application-number {
         margin-bottom: 8px;
     }
+
 
     .application__content {
         flex-direction: row;
         align-items: stretch;
         gap: 32px;
     }
+
 
     /* Card desktop visibile */
     .application-card {
@@ -372,14 +424,13 @@ a {
         background: var(--green);
     }
 
+
     .application-image {
         margin-bottom: 10px;
     }
-
-    .application-info {
-        padding: 20px 20px 40px 20px;
-    }
-
+    .application-info{
+    padding: 20px 20px 40px 20px;
+}
     .application-number {
         font-size: 40px;
         line-height: 48px;
@@ -388,6 +439,7 @@ a {
         text-align: center;
     }
 
+
     .application-text_card {
         color: rgba(255, 255, 255, 0.7);
         text-align: center;
@@ -395,12 +447,15 @@ a {
         font-weight: 400;
         line-height: 1.5;
 
+
     }
+
 
     .application-form {
         flex: 1;
         max-width: none;
     }
+
 
     .application-form__input,
     .application-form__textarea {
@@ -408,11 +463,13 @@ a {
         font-weight: 400;
     }
 
+
     .application-form__legend {
         font-size: 20px;
         letter-spacing: -0.4px;
         margin-bottom: 16px;
     }
+
 
     .application-form__teachers {
         border: none;
@@ -422,6 +479,7 @@ a {
         align-items: center;
         flex-direction: row;
     }
+
 
     .application-form__btn {
         width: 100%;
@@ -437,12 +495,14 @@ a {
         margin: 32px 0 12px;
     }
 
+
     .application-form__privacy {
         color: rgba(18, 20, 23, 0.5);
         font-size: 14px;
         font-weight: 400;
         line-height: 1.7;
         max-width: 500px;
+
 
         font-size: 14px;
         font-style: normal;
