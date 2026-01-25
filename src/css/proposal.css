@@ -3,12 +3,13 @@
   margin: 80px 0;
 }
 
+/* Контейнер з градієнтним фоном та заокругленням */
 .proposal-container {
   border-radius: 16px;
   width: 100%;
 
   background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
-  overflow: hidden;
+  overflow: hidden; /* Щоб контент не виходив за межі заокруглених кутів */
 }
 
 .proposal-title {
@@ -19,19 +20,24 @@
   padding: 40px 20px 0 20px;
 }
 
+/* Обертка для картки, що центрує її та створює відступи */
 .card-container {
   display: flex;
   justify-content: center;
   padding: 65px 0;
 
-  margin: 0 -20px;
+  margin: 0 -20px; /* Компенсація падінгів для мобільної версії */
 }
 
+/* Контейнер для картки та її фонових карток */
 .card-wrapper {
   position: relative;
-  width: calc(100% - 80px);
+  width: calc(
+    100% - 80px
+  ); /* Розраховує висоту кртки автоматично до контенту (без цього дебільно ресайзилось) */
 }
 
+/* Загальні стилі для декоративних підкладок під карткою */
 .card-bg-1,
 .card-bg-2 {
   position: absolute;
@@ -42,18 +48,21 @@
   border-radius: 16px;
 }
 
+/* Перша декоративна підкладка (нахилена вліво) */
 .card-bg-1 {
   background: var(--light-green);
   transform: rotate(-11deg);
   z-index: 1;
 }
 
+/* Друга декоративна підкладка (нахилена вправо, напівпрозора) */
 .card-bg-2 {
   background: rgba(255, 255, 255, 0.5);
   transform: rotate(9deg);
   z-index: 2;
 }
 
+/* Головна біла картка з контентом */
 .card-main {
   position: relative;
   background-color: white;
@@ -63,6 +72,7 @@
   height: auto;
 }
 
+/* Приховуємо зображення на мобільних пристроях */
 .proposal-image-box {
   display: none;
 }
@@ -94,6 +104,7 @@
   color: var(--black);
 }
 
+/* Елемент списку з іконкою-галочкою */
 .benefits-item::before {
   content: '';
   flex-shrink: 0;
@@ -127,7 +138,7 @@
 
   .proposal-container {
     border-radius: 30px;
-    overflow: visible;
+    overflow: visible; /* Дозволяємо декоративним карткам вилазити */
   }
 
   .proposal-title {
@@ -164,6 +175,7 @@
     transform: rotate(10deg);
   }
 
+  /* Перетворюємо картку на flex-контейнер для розміщення тексту та картинки поруч */
   .card-main {
     padding: 63px 32px;
     border-radius: 30px;
@@ -181,6 +193,7 @@
     width: auto;
   }
 
+  /* Показуємо фото книг */
   .proposal-image-box {
     display: block;
     width: 214px;
