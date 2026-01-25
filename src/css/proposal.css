@@ -1,462 +1,251 @@
-/* --- DESKTOP (min-width: 1200px) --- */
-@media screen and (min-width: 1200px) {
-  .proposal {
-    padding: 100px 0;
-  }
+/* --- Глобальні змінні --- */
+:root {
+  --black: #121417;
+  --green: #4dc274;
+  --light-green: #d4fde1;
+  --white: #fff;
+  --accent-header: #bee8cc;
+  --font-family: "Manrope", sans-serif;
+}
 
+.proposal-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.proposal-container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- Обгортка з градієнтом та відступами --- */
+.proposal-bg-wrapper {
+  width: calc(100% - 40px);
+  /* Виправлений градієнт згідно з дизайном */
+  background: linear-gradient(85deg, #4dc274 2.25%, #bee8cc 131.25%);
+  border-radius: 30px;
+  padding: 40px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Заголовок --- */
+.proposal-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  color: var(--white);
+  font-size: 38px;
+  line-height: 1.05;
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 295px;
+}
+
+.proposal-title .accent {
+  color: var(--accent-header);
+}
+
+/* --- Стек та шари (центрування без помилок) --- */
+.proposal-card-stack {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proposal-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Видалено ламаючі властивості margin-top/left */
+  border-radius: 16px;
+}
+
+/* --- Основна картка (без min-height) --- */
+.proposal-main-card {
+  position: relative;
+  background-color: var(--white);
+  z-index: 5;
+  width: 100%;
+  max-width: 335px;
+  padding: 40px 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  /* Видалено min-height: 737px */
+}
+
+/* --- Списки та кнопки --- */
+.proposal-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.proposal-features li {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: rgba(18, 20, 23, 0.8);
+}
+
+.proposal-features li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' fill='none'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M9 1 3.5 6.5 1 4'/%3E%3C/svg%3E") no-repeat center;
+  border-radius: 50%;
+}
+
+.proposal-btn {
+  width: 100%;
+  max-width: 255px;
+  height: 52px;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Приховано для мобайлу */
+.proposal-image-box {
+  display: none;
+}
+
+/* --- MOBILE LAYERS (Screenshot 2, 3) --- */
+.layer-white {
+  width: 294px;
+  height: 407px;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%) rotate(-11deg);
+  z-index: 1;
+}
+
+.layer-green {
+  width: 294px;
+  height: 407px;
+  background: var(--light-green);
+  transform: translate(-50%, -50%) rotate(9deg);
+  z-index: 2;
+}
+
+/* --- TABLET (768px - 1279px) --- */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .proposal-container { 
+    max-width: 704px; /* */
+  }
+  
   .proposal-bg-wrapper {
-    background: linear-gradient(135deg, #78dca2 0%, #47c179 100%);
-    border-radius: 40px;
-    padding: 64px 312px 64px 64px;
-    position: relative;
-    overflow: visible;
+    width: 100%;
+    max-width: 704px;
+    padding: 64px 32px;
   }
 
   .proposal-title {
-    font-family: var(--font-family);
-    color: var(--white);
     font-size: 60px;
-    font-weight: 700;
-    line-height: 117%;
     margin-bottom: 64px;
-    max-width: 776px;
-    text-align: left;
+    max-width: 640px;
   }
 
-  .proposal-title .accent {
-    color: #bee8cc;
+  /* Вигляд фонових шарів для планшета (Screenshot 4, 13) */
+  .layer-white {
+    width: 668px; /* */
+    height: 500px;
+    transform: translate(-50%, -50%) rotate(-11deg);
+    border-radius: 30px;
   }
 
-  .proposal-card-stack {
-    position: relative;
-    width: 100%;
-    min-height: 470px;
-    display: flex;
-    justify-content: center;
+  .layer-green {
+    width: 668px; /* */
+    height: 500px;
+    background: var(--light-green);
+    transform: translate(-50%, -50%) rotate(10deg); /* */
+    border-radius: 30px;
+  }
+
+  .proposal-main-card {
+    width: 667px; /* */
+    max-width: 667px;
+    min-height: auto; /* Видалено жорстку висоту */
+    padding: 40px;
+    border-radius: 30px;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
-  .proposal-layer {
-    position: absolute;
-    border-radius: 30px;
+  .proposal-image-box {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .proposal-img {
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+  }
+}
+
+/* --- DESKTOP (min-width: 1280px) --- */
+@media screen and (min-width: 1280px) {
+  .proposal-container { 
+    max-width: 1240px; 
+  }
+
+  .proposal-bg-wrapper {
+    padding: 64px; /* */
+    align-items: flex-start;
+  }
+
+  .proposal-title {
+    font-size: 60px;
+    line-height: 117%;
+    margin-bottom: 133px; /* */
+    max-width: 776px;
   }
 
   .layer-white {
     width: 1010px;
     height: 401px;
-    background: rgba(255, 255, 255, 0.5);
-    transform: rotate(-11deg);
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    margin-top: -200.5px;
-    margin-left: -505px;
+    transform: translate(-50%, -50%) rotate(-11deg);
+    border-radius: 30px;
   }
 
   .layer-green {
     width: 1049px;
     height: 462px;
-    background: var(--light-green);
-    transform: rotate(8deg);
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    margin-top: -231px;
-    margin-left: -524.5px;
+    transform: translate(-50%, -50%) rotate(8deg);
+    border-radius: 30px;
   }
 
   .proposal-main-card {
-    position: relative;
     width: 1023px;
-    min-height: 470px;
-    background-color: var(--white);
+    max-width: 1023px;
+    height: 470px;
     padding: 64px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 5;
-    margin: 0 auto;
-    gap: 64px;
-  }
-
-  .proposal-content {
-    flex: 1;
-    max-width: 653px;
-  }
-
-  .proposal-subtitle {
-    font-family: var(--font-family);
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--black);
-  }
-
-  .proposal-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 32px 0;
-  }
-
-  .proposal-features li {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 14px;
-    font-size: 16px;
-    line-height: 1.4;
-    color: rgba(18, 20, 23, 0.8);
-    font-family: var(--font-family);
-  }
-
-  .proposal-features li::before {
-    content: '✓';
-    background-color: var(--green);
-    color: var(--white);
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    flex-shrink: 0;
-  }
-
-  .proposal-btn {
-    background-color: var(--green);
-    color: var(--white);
-    width: 306px;
-    height: 60px;
-    border-radius: 12px;
-    padding: 16px 64px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .proposal-image-box {
-    flex: 0 0 214px;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .proposal-img {
-    width: 214px;
-    height: 263px;
-    object-fit: contain;
-  }
-}
-
-/* --- TABLET VERSION (768px - 1199px) --- */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .proposal {
-    padding: 100px 0;
-  }
-
-  .proposal-bg-wrapper {
-    background: linear-gradient(135deg, #78dca2 0%, #47c179 100%);
-    border-radius: 40px;
-    padding: 64px 20px;
-    position: relative;
-    overflow: visible;
-  }
-
-  .proposal-title {
-    font-family: var(--font-family);
-    color: var(--white);
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 117%;
-    margin-bottom: 64px;
-    max-width: 640px;
-    text-align: left;
-  }
-
-  .proposal-title .accent {
-    color: #bee8cc;
-  }
-
-  .proposal-card-stack {
-    position: relative;
-    width: 100%;
-    min-height: 499px;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .proposal-layer {
-    position: absolute;
-    border-radius: 30px;
-  }
-
-  .layer-white {
-    width: 1010px;
-    height: 401px;
-    background: rgba(255, 255, 255, 0.5);
-    transform: rotate(-11deg);
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    margin-top: -200.5px;
-    margin-left: -505px;
-  }
-
-  .layer-green {
-    width: 668px;
-    height: 500px;
-    background: var(--light-green);
-    transform: rotate(10deg);
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -334px;
-  }
-
-  .proposal-main-card {
-    position: relative;
-    width: 667px;
-    min-height: 499px;
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 30px;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
-    margin: 0 auto;
-    gap: 40px;
-  }
-
-  .proposal-content {
-    flex: 1;
-    max-width: 450px;
-  }
-
-  .proposal-subtitle {
-    font-family: var(--font-family);
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--black);
-  }
-
-  .proposal-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 32px 0;
-  }
-
-  .proposal-features li {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 14px;
-    font-size: 16px;
-    line-height: 1.4;
-    color: rgba(18, 20, 23, 0.8);
-    font-family: var(--font-family);
-  }
-
-  .proposal-features li::before {
-    content: '✓';
-    background-color: var(--green);
-    color: var(--white);
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    flex-shrink: 0;
-  }
-
-  .proposal-btn {
-    background-color: var(--green);
-    color: var(--white);
-    width: 306px;
-    height: 60px;
-    border-radius: 12px;
-    padding: 16px 64px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .proposal-image-box {
-    flex: 0 0 214px;
-    display: flex;
-    justify-content: flex-end;
+    display: block;
   }
-
+  
   .proposal-img {
-    width: 214px;
-    height: 263px;
-    object-fit: contain;
-  }
-}
-
-/* --- MOBILE VERSION (max-width: 767px) --- */
-@media screen and (max-width: 767px) {
-  .proposal {
-    padding: 100px 0;
-  }
-
-  .proposal-bg-wrapper {
-    background: linear-gradient(80deg, #4dc274 0%, #bee8cc 100%);
-    border-radius: 40px;
-    padding: 40px 20px;
-    position: relative;
-    overflow: visible;
-  }
-
-  .proposal-title {
-    font-family: var(--font-family);
-    color: var(--white);
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 105%;
-    margin: 40px 20px 40px 20px;
-    max-width: 295px;
-    text-align: left;
-  }
-
-  .proposal-title .accent {
-    color: #bee8cc;
-  }
-
-  .proposal-card-stack {
-    position: relative;
-    width: 100%;
-    min-height: 737px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .proposal-layer {
-    position: absolute;
-    border-radius: 16px;
-  }
-
-  .layer-white {
-    width: 294px;
-    height: 407px;
-    background: rgba(255, 255, 255, 0.5);
-    transform: rotate(-11deg);
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    margin-top: -203.5px;
-    margin-left: -147px;
-  }
-
-  .layer-green {
-    width: 294px;
-    height: 407px;
-    background: var(--light-green);
-    transform: rotate(9deg);
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    margin-top: -203.5px;
-    margin-left: -147px;
-  }
-
-  .proposal-main-card {
-    position: relative;
-    width: 335px;
-    min-height: 737px;
-    background-color: var(--white);
-    padding: 40px 20px;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    z-index: 5;
-    margin: 0 auto;
-  }
-
-  .proposal-content {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .proposal-subtitle {
-    font-family: var(--font-family);
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--black);
-  }
-
-  .proposal-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 32px 0;
-  }
-
-  .proposal-features li {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 14px;
-    font-size: 16px;
-    line-height: 1.4;
-    color: rgba(18, 20, 23, 0.8);
-    font-family: var(--font-family);
-  }
-
-  .proposal-features li::before {
-    content: '✓';
-    background-color: var(--green);
-    color: var(--white);
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    flex-shrink: 0;
-  }
-
-  .proposal-btn {
-    background-color: var(--green);
-    color: var(--white);
-    width: 255px;
-    height: 52px;
-    border-radius: 12px;
-    padding: 14px 67px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .proposal-image-box {
-    display: none;
-  }
-
-  .proposal-img {
-    display: none;
+    max-width: 214px;
   }
 }
