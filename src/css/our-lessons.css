@@ -1,20 +1,17 @@
 .our-lessons {
   text-align: center;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  margin: 80px 20px;
 }
 
 @media screen and (min-width: 768px) {
   .our-lessons {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  margin: 100px 32px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .our-lessons {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    margin: 150px 128px;
   }
 }
 
@@ -54,7 +51,7 @@
   left: -6px;
   bottom: 4px;
   height: 12px;
-  background-color: var(--light-green);
+  background-color: #BEE8CC;
   border-radius: 8px;
   z-index: -1;
 }
