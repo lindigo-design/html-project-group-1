@@ -4,8 +4,7 @@
     padding: 0;
     text-align: left;
     display: flex;
-    justify-content: center;
-
+    justify-content: flex-start;
 
 }
 
@@ -14,7 +13,6 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    max-width: 375px;
     padding: 40px 20px 20px 20px;
     margin: 0 auto;
 }
@@ -169,6 +167,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .footer {
+    justify-content: center;
+
+}
     .footer-container {
         max-width: 768px;
         display: flex;
