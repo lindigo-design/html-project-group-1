@@ -1,8 +1,7 @@
 /* ========== TEACHERS SECTION ========== */
 
 .teachers-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding:0 20px;
 }
 
 /* контейнер тільки для teachers (не чіпаємо .container глобально) */
