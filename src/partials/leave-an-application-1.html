@@ -1,1 +1,152 @@
+<section class="application" id="leave-application">
+  <div class="application__container">
+    <h2 class="application__title">
+      Leave an
+      <span class="application__accent underline">application</span>
+    </h2>
+    <p class="application__text">
+      Please use the form below to contact us. Enter your name, email, and
+      message and we’ll get back to you shortly.
+    </p>
 
+    <div class="application__content">
+      <!-- Card immagine + blocco verde -->
+      <div class="application-card">
+        <div class="application-image">
+          <img
+            src="/img/leave-an-application/application.webp"
+            alt="Student"
+            width="597px"
+            height="537"
+          />
+        </div>
+
+        <div class="application-info">
+          <h2 class="application-number">1000</h2>
+          <p class="application-text_card">
+            of our online English language lessons! This journey has been full
+            of discovery, growth and unforgettable moments, and we are happy to
+            share this joyful event with you.
+          </p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form class="application-form" name="application_form" autocomplete="off">
+        <div class="application-form__fields">
+          <label class="application-form__label">
+            <span class="application-form__sr">Name</span>
+            <input
+              class="application-form__input"
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+              minlength="2"
+              maxlength="30"
+              pattern="^[a-zA-Z]+\s[a-zA-Z]*"
+              title="Name must contains two words separated by space"
+            />
+          </label>
+
+          <label class="application-form__label">
+            <span class="application-form__sr">Email</span>
+            <input
+              class="application-form__input"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+              title="Enter a valid email address (example@mail.com)."
+            />
+          </label>
+
+          <label class="application-form__label">
+            <span class="application-form__sr">Phone</span>
+            <input
+              class="application-form__input"
+              type="tel"
+              name="phone"
+              placeholder="Phone"
+              pattern="^[0-9]{7,15}$"
+              title="Phone number must contain only digits (7–15 numbers)."
+            />
+          </label>
+
+          <label class="application-form__label">
+            <span class="application-form__sr">Comment</span>
+            <textarea
+              class="application-form__textarea"
+              name="comment"
+              placeholder="Comment"
+              rows="5"
+            ></textarea>
+          </label>
+        </div>
+
+        <fieldset class="application-form__teachers">
+          <legend class="application-form__legend">Choose a teacher</legend>
+
+          <label class="application-form__radio">
+            <input
+              class="application-form__radio-input"
+              type="radio"
+              name="teacher"
+              value="maria"
+              checked
+            />
+            <span class="application-form__radio-ui"></span>
+            <span class="application-form__radio-text">Maria</span>
+          </label>
+
+          <label class="application-form__radio">
+            <input
+              class="application-form__radio-input"
+              type="radio"
+              name="teacher"
+              value="artem"
+            />
+            <span class="application-form__radio-ui"></span>
+            <span class="application-form__radio-text">Artem</span>
+          </label>
+
+          <label class="application-form__radio">
+            <input
+              class="application-form__radio-input"
+              type="radio"
+              name="teacher"
+              value="ilona"
+            />
+            <span class="application-form__radio-ui"></span>
+            <span class="application-form__radio-text">Ilona</span>
+          </label>
+
+          <label class="application-form__radio">
+            <input
+              class="application-form__radio-input"
+              type="radio"
+              name="teacher"
+              value="volodymyr"
+            />
+            <span class="application-form__radio-ui"></span>
+            <span class="application-form__radio-text">Volodymyr</span>
+          </label>
+        </fieldset>
+
+        <button class="application-form__btn" type="submit">Send</button>
+
+        <p class="application-form__privacy">
+          By clicking on "Send" button, you agree to our
+          <a
+            class="application-form__link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Privacy Policy</a
+          >, and allow Promodo to use this information for marketing purposes.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
