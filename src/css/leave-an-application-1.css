@@ -3,9 +3,6 @@ a {
     color: currentColor;
     text-decoration: none;
 }
-.section{
-    margin: 0 20px 80px;
-}
 
 .application{
     display: flex;
