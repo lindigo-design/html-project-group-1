@@ -117,7 +117,7 @@
 }
 
 /* ========== TABLET (>=768) ========== */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
 
   .container-teachers {
     max-width: 704px;
@@ -166,6 +166,15 @@
     line-height: 1.5;
   }
 }
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .teacher-card {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+}
+
+
 
 /* ========== DESKTOP (>=1280) ========== */
 @media screen and (min-width: 1280px) {
