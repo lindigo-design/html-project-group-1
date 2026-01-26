@@ -18,11 +18,12 @@
     align-items: center; 
     justify-content: center; 
     gap: 40px;  
+    max-width: 100%;
 }
 @media screen and (min-width: 768px){
   .about-us-container{
-    gap: 64px;  
     max-width: 704px;
+    gap: 64px;  
     padding: 0;
 }    
 }
@@ -47,6 +48,7 @@
 @media screen and (min-width: 768px){
 .about-us-info{
         padding: 0 23px;
+        max-width: 100%;
 }
 }
 @media screen and (min-width: 1280px){
@@ -97,7 +99,7 @@
 } 
 
 .text-description{
-    width: 100%;
+    max-width: 100%;
     padding: 0;
     text-align: center;
 
@@ -159,7 +161,7 @@
 @media screen and (min-width: 768px){
 .features-item:last-child {
   width: 100%;
-  max-width: 704px;
+  max-width: 100%;
 }
 } 
 @media screen and (min-width: 1280px){
@@ -167,6 +169,12 @@
   max-width: 310px;
 }
 } 
+.features-item{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 100%;
+}
 /*  Featurs list  */
 .features-list {
   display: flex;

@@ -9,7 +9,6 @@
 
 .reviews-container {
     width: 100%;
-    margin: 40px auto 0;
     padding: 0;
 }
 
@@ -87,8 +86,7 @@
 
 
     .reviews-container {
-        max-width: 704px;
-        margin-top: 64px;
+        max-width: 704px;  
     }
 
     .About-us-info {

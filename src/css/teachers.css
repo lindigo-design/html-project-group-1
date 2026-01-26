@@ -6,7 +6,7 @@
 
 /* контейнер тільки для teachers (не чіпаємо .container глобально) */
 .container-teachers {
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   gap: 40px;
 }
@@ -120,7 +120,7 @@
 @media screen and (min-width: 768px) {
 
   .container-teachers {
-    min-width: 704px;
+    max-width: 704px;
     margin: 0 auto;
   }
 
