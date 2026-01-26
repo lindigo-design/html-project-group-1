@@ -53,6 +53,16 @@
 
 .footer-address {
     display:block;
+    color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-decoration: none;
+}
+.footer-address:hover,
+.footer-address:focus-visible {
+  text-decoration: underline;
+  color: var(--green);
 }
 
 .footer-contacts-h {
